@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('codechallenge-forms app is running!');
+    expect(await page.getTitleText()).toEqual('template-forms app is running!');
   });
 
   afterEach(async () => {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "codechallenge-forms": {
+    "template-forms": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/codechallenge-forms",
+            "outputPath": "dist/template-forms",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -65,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "codechallenge-forms:build"
+            "browserTarget": "template-forms:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "codechallenge-forms:build:production"
+              "browserTarget": "template-forms:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "codechallenge-forms:build"
+            "browserTarget": "template-forms:build"
           }
         },
         "test": {
@@ -113,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "codechallenge-forms:serve"
+            "devServerTarget": "template-forms:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "codechallenge-forms:serve:production"
+              "devServerTarget": "template-forms:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "codechallenge-forms"
+  "defaultProject": "template-forms"
 }
